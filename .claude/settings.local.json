@@ -7,7 +7,9 @@
       "Bash(wsl bash -c \"sudo apt update && sudo apt install -y python3-pip\")",
       "Bash(wsl bash:*)",
       "Bash(python scripts/generate_index.py:*)",
-      "Bash(chmod:*)"
+      "Bash(chmod:*)",
+      "Bash(git pull:*)",
+      "Bash(git merge:*)"
     ]
   }
 }
