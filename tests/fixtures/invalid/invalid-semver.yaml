@@ -1,0 +1,13 @@
+name: bad-version
+version: 1.0
+description: Module with invalid semantic version format
+
+author:
+  name: Test Author
+
+module_type: behavior
+entry_point: bad_version:BadVersion
+
+repository:
+  type: git
+  url: https://github.com/test/bad-version

@@ -1,0 +1,9 @@
+name: incomplete-module
+version: 1.0.0
+# Missing description - required field
+
+author:
+  name: Test Author
+
+module_type: agent
+# Missing entry_point - required field

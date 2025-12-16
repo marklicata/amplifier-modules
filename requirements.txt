@@ -1,0 +1,10 @@
+# Core dependencies for registry scripts
+jsonschema>=4.20.0
+PyYAML>=6.0.1
+
+# For version constraint parsing (breaking change detection)
+packaging>=23.0
+
+# Development dependencies
+pytest>=7.4.0
+pytest-cov>=4.1.0

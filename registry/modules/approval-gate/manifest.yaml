@@ -1,0 +1,41 @@
+name: approval-gate
+version: 0.5.0
+description: Reusable behavior for adding human approval gates to agent workflows with customizable prompts and timeout handling
+
+author:
+  name: DevToolsContributor
+  email: devtools@example.com
+  github: devtoolscontributor
+
+module_type: behavior
+entry_point: approval_gate.behavior:ApprovalGateBehavior
+
+repository:
+  type: git
+  url: https://github.com/devtoolscontributor/amplifier-approval-gate
+  branch: main
+
+foundation_version: ">=0.1.0"
+python_version: ">=3.10"
+
+capabilities:
+  - human-in-the-loop
+  - workflow-control
+  - decision-gates
+
+tags:
+  - workflow
+  - approval
+  - human-in-the-loop
+  - control-flow
+
+license: MIT
+homepage: https://github.com/devtoolscontributor/amplifier-approval-gate
+
+keywords:
+  - approval
+  - gate
+  - workflow
+  - review
+
+status: active

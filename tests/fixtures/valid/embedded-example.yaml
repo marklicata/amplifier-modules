@@ -1,0 +1,14 @@
+name: embedded-test
+version: 0.1.0
+description: Test module with embedded source code
+
+author:
+  name: Embedded Author
+
+module_type: context
+entry_point: embedded_test:EmbeddedContext
+
+repository:
+  type: embedded
+
+foundation_version: ">=0.1.0"

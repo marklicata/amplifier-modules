@@ -1,0 +1,13 @@
+name: bad-entry
+version: 1.0.0
+description: Module with invalid entry point format
+
+author:
+  name: Test Author
+
+module_type: agent
+entry_point: not-a-valid-entry-point
+
+repository:
+  type: git
+  url: https://github.com/test/bad-entry

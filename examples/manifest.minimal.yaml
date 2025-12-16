@@ -1,0 +1,15 @@
+# Minimal required manifest - just the essentials
+
+name: simple-helper
+version: 0.1.0
+description: A simple helper module with minimal configuration
+
+author:
+  name: Developer Name
+
+module_type: behavior
+entry_point: simple_helper:HelperBehavior
+
+# For minimal manifests without external repos, use embedded
+repository:
+  type: embedded

@@ -1,0 +1,68 @@
+# Example amplifier module manifest
+# Copy this template and modify for your module
+
+name: my-awesome-agent
+version: 1.0.0
+description: An example agent that demonstrates the amplifier module manifest format
+
+author:
+  name: Your Name
+  email: you@example.com
+  github: yourgithubusername
+
+# Module type - must be one of: agent, behavior, provider, bundle, context
+module_type: agent
+
+# Python entry point in format: module.path:ClassName
+entry_point: my_awesome_agent.main:MyAwesomeAgent
+
+# Repository information
+repository:
+  type: git  # 'git' for external repos, 'embedded' for source in registry
+  url: https://github.com/yourusername/my-awesome-agent
+  branch: main
+  path: src  # optional subdirectory
+
+# Version constraints
+foundation_version: ">=0.1.0"
+python_version: ">=3.10"
+
+# Dependencies
+dependencies:
+  python:
+    - httpx>=0.24.0
+    - pydantic>=2.0
+  modules:
+    - some-other-module>=1.0.0
+
+# Capabilities this module provides (for discovery)
+capabilities:
+  - code-generation
+  - file-manipulation
+  - api-integration
+
+# Searchable tags (max 10)
+tags:
+  - productivity
+  - developer-tools
+  - automation
+
+# SPDX license identifier
+license: MIT
+
+# Optional homepage/docs URL
+homepage: https://github.com/yourusername/my-awesome-agent#readme
+
+# Additional search keywords
+keywords:
+  - assistant
+  - coding
+  - automation
+
+# Status - set by registry for broken modules
+# Values: active, deprecated, broken, archived
+status: active
+
+# NOTE: The following fields are managed by the registry, not the author:
+# - verified: boolean (set by core team)
+# - analytics: download counts, timestamps

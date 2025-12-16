@@ -1,0 +1,30 @@
+# Code Owners for amplifier-modules registry
+#
+# These owners will be automatically requested for review when someone
+# opens a pull request that modifies files in the specified paths.
+#
+# More info: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owners for everything in the repo
+* @microsoft/amplifier-core
+
+# Registry infrastructure (schemas, scripts, workflows)
+/schemas/ @microsoft/amplifier-core
+/scripts/ @microsoft/amplifier-core
+/.github/ @microsoft/amplifier-core
+/requirements.txt @microsoft/amplifier-core
+/pytest.ini @microsoft/amplifier-core
+
+# Verified modules - MUST be approved by core team
+/registry/verified/ @microsoft/amplifier-core
+
+# Community modules - auto-approve after CI passes
+# (actual approval handled by GitHub Actions bot after validation)
+/registry/modules/ @microsoft/amplifier-modules-bot
+
+# Documentation - core team reviews but community PRs welcome
+/*.md @microsoft/amplifier-core
+/GOVERNANCE.md @microsoft/amplifier-core
+
+# Examples - community contributions welcome after review
+/examples/ @microsoft/amplifier-core

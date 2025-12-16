@@ -1,0 +1,74 @@
+# Validates module manifests on PR
+name: Validate Manifest
+
+on:
+  pull_request:
+    paths:
+      - 'registry/modules/**/manifest.yaml'
+      - 'registry/modules/**/manifest.yml'
+      - 'registry/modules/**/manifest.json'
+      - 'registry/verified/**/manifest.yaml'
+      - 'registry/verified/**/manifest.yml'
+      - 'registry/verified/**/manifest.json'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install jsonschema pyyaml
+      
+      - name: Find changed manifests
+        id: changed
+        run: |
+          echo "files=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep -E 'manifest\.(yaml|yml|json)$' | tr '\n' ' ')" >> $GITHUB_OUTPUT
+      
+      - name: Validate manifests
+        run: |
+          for manifest in ${{ steps.changed.outputs.files }}; do
+            echo "Validating: $manifest"
+            python scripts/validate_manifest.py "$manifest" --strict
+          done
+      
+      - name: Check namespace permissions
+        if: contains(github.event.pull_request.head.ref, 'registry/verified')
+        run: |
+          # Check if PR author is in CODEOWNERS for verified modules
+          echo "Verified module submission - checking permissions"
+          # This would check against CODEOWNERS or team membership
+          # For now, just flag for manual review
+          echo "::warning::Verified module submissions require core team approval"
+
+  regenerate-index:
+    runs-on: ubuntu-latest
+    needs: validate
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: pip install pyyaml
+      
+      - name: Regenerate index
+        run: python scripts/generate_index.py --pretty
+      
+      - name: Check for index changes
+        run: |
+          if git diff --quiet registry/index.json; then
+            echo "Index unchanged"
+          else
+            echo "::notice::Index will be updated when this PR is merged"
+            git diff registry/index.json
+          fi

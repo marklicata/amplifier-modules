@@ -1,0 +1,22 @@
+name: test-behavior
+version: 2.1.0
+description: A test behavior module demonstrating reusable patterns
+
+author:
+  name: Another Author
+  github: anotherauthor
+
+module_type: behavior
+entry_point: test_behavior:TestBehavior
+
+repository:
+  type: git
+  url: https://github.com/anotherauthor/test-behavior
+
+foundation_version: ">=0.5.0"
+
+tags:
+  - workflow
+  - reusable
+
+license: Apache-2.0

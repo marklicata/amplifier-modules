@@ -1,0 +1,36 @@
+name: hello-world
+version: 1.0.0
+description: Minimal embedded example agent demonstrating the simplest possible Amplifier module with source included
+
+author:
+  name: Amplifier Team
+  email: amplifier@microsoft.com
+  github: microsoft
+
+module_type: agent
+entry_point: hello_world:HelloAgent
+
+repository:
+  type: embedded
+
+foundation_version: ">=0.1.0"
+python_version: ">=3.10"
+
+capabilities:
+  - greeting
+  - example
+
+tags:
+  - example
+  - tutorial
+  - getting-started
+
+license: MIT
+
+keywords:
+  - hello-world
+  - example
+  - tutorial
+  - embedded
+
+status: active

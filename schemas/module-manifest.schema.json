@@ -1,0 +1,200 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/microsoft/amplifier-modules/schemas/module-manifest.schema.json",
+  "title": "Amplifier Module Manifest",
+  "description": "Schema for amplifier-foundation module manifests",
+  "type": "object",
+  "required": ["name", "version", "description", "author", "module_type", "entry_point"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*[a-z0-9]$",
+      "minLength": 3,
+      "maxLength": 64,
+      "description": "Unique module identifier (lowercase, hyphens allowed, must start with letter)"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+(-[a-zA-Z0-9.]+)?$",
+      "description": "Semantic version (e.g., 1.0.0, 2.1.0-beta.1)"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 500,
+      "description": "Brief description of what the module does"
+    },
+    "author": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Author's display name"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "Author's contact email"
+        },
+        "github": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9-]+$",
+          "description": "GitHub username"
+        }
+      }
+    },
+    "module_type": {
+      "type": "string",
+      "enum": ["agent", "behavior", "provider", "bundle", "context"],
+      "description": "Type of amplifier-foundation module"
+    },
+    "entry_point": {
+      "type": "string",
+      "pattern": "^[a-zA-Z_][a-zA-Z0-9_]*(\\.[a-zA-Z_][a-zA-Z0-9_]*)*:[a-zA-Z_][a-zA-Z0-9_]*$",
+      "description": "Python entry point (e.g., my_module.main:MyAgent)"
+    },
+    "repository": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["git", "embedded"],
+          "default": "git",
+          "description": "Whether source is external (git) or in registry (embedded)"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Git repository URL (required if type is 'git')"
+        },
+        "branch": {
+          "type": "string",
+          "default": "main",
+          "description": "Branch to use for installation"
+        },
+        "path": {
+          "type": "string",
+          "description": "Subdirectory within repo containing the module"
+        }
+      }
+    },
+    "foundation_version": {
+      "type": "string",
+      "pattern": "^(>=|<=|~=|==|\\^)?\\d+\\.\\d+(\\.\\d+)?$",
+      "description": "Compatible amplifier-foundation version constraint"
+    },
+    "python_version": {
+      "type": "string",
+      "pattern": "^(>=|<=|~=|==)?3\\.[0-9]+(\\.[0-9]+)?$",
+      "default": ">=3.10",
+      "description": "Required Python version"
+    },
+    "dependencies": {
+      "type": "object",
+      "properties": {
+        "python": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "PyPI package dependencies"
+        },
+        "modules": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]*[a-z0-9](>=|<=|~=|==|\\^)?\\d+\\.\\d+(\\.\\d+)?$"
+          },
+          "description": "Other amplifier modules this depends on"
+        }
+      }
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of capabilities this module provides"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9-]*$"
+      },
+      "maxItems": 10,
+      "description": "Searchable tags for discovery"
+    },
+    "license": {
+      "type": "string",
+      "default": "MIT",
+      "description": "SPDX license identifier"
+    },
+    "homepage": {
+      "type": "string",
+      "format": "uri",
+      "description": "Project homepage or documentation URL"
+    },
+    "keywords": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Additional search keywords"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "deprecated", "broken", "archived"],
+      "default": "active",
+      "description": "Current module status"
+    },
+    "status_message": {
+      "type": "string",
+      "description": "Explanation for non-active status (e.g., why it's broken)"
+    },
+    "verified": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this module is verified by core team (set by registry, not author)"
+    },
+    "analytics": {
+      "type": "object",
+      "description": "Usage analytics (managed by registry)",
+      "properties": {
+        "downloads": {
+          "type": "integer",
+          "default": 0
+        },
+        "downloads_weekly": {
+          "type": "integer",
+          "default": 0
+        },
+        "first_published": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "last_updated": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  },
+  "if": {
+    "properties": {
+      "repository": {
+        "properties": {
+          "type": { "const": "git" }
+        }
+      }
+    }
+  },
+  "then": {
+    "properties": {
+      "repository": {
+        "required": ["url"]
+      }
+    }
+  }
+}

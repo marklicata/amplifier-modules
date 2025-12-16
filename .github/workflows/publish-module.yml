@@ -1,0 +1,78 @@
+# Regenerates index and publishes on merge to main
+name: Publish Module
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'registry/modules/**/manifest.yaml'
+      - 'registry/modules/**/manifest.yml'
+      - 'registry/modules/**/manifest.json'
+      - 'registry/verified/**/manifest.yaml'
+      - 'registry/verified/**/manifest.yml'
+      - 'registry/verified/**/manifest.json'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: pip install jsonschema pyyaml
+      
+      - name: Validate all manifests
+        run: |
+          find registry -name 'manifest.yaml' -o -name 'manifest.yml' -o -name 'manifest.json' | while read manifest; do
+            echo "Validating: $manifest"
+            python scripts/validate_manifest.py "$manifest"
+          done
+      
+      - name: Regenerate index
+        run: python scripts/generate_index.py --pretty
+      
+      - name: Commit updated index
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          if git diff --quiet registry/index.json; then
+            echo "No index changes to commit"
+          else
+            git add registry/index.json
+            git commit -m "chore: regenerate registry index [skip ci]"
+            git push
+          fi
+      
+      - name: Notify on new module
+        run: |
+          # Get list of newly added modules
+          ADDED=$(git diff --name-only HEAD~1 HEAD | grep -E 'registry/.*/manifest\.(yaml|yml|json)$' || true)
+          if [ -n "$ADDED" ]; then
+            echo "New/updated modules:"
+            echo "$ADDED"
+            # Could add Slack/Teams notification here
+          fi
+
+  track-analytics:
+    runs-on: ubuntu-latest
+    needs: publish
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Update analytics timestamps
+        run: |
+          # This job would update last_updated timestamps
+          # For now, just log the event
+          echo "Module published at $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          # Future: Update analytics data store

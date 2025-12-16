@@ -1,0 +1,32 @@
+name: test-agent
+version: 1.0.0
+description: A test agent module for validation testing purposes
+
+author:
+  name: Test Author
+  email: test@example.com
+  github: testauthor
+
+module_type: agent
+entry_point: test_agent.main:TestAgent
+
+repository:
+  type: git
+  url: https://github.com/testauthor/test-agent
+  branch: main
+
+foundation_version: ">=0.1.0"
+python_version: ">=3.10"
+
+dependencies:
+  python:
+    - httpx>=0.24.0
+  modules:
+    - some-module>=1.0.0
+
+tags:
+  - testing
+  - example
+
+license: MIT
+status: active

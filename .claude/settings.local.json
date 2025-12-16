@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat:*)",
+      "Bash(wsl bash -c \"cd /mnt/c/Users/malicata/source/amplifier-modules && pwd && ls -la\")",
+      "Bash(wsl bash -c \"python3 --version && pip3 --version\")",
+      "Bash(wsl bash -c \"sudo apt update && sudo apt install -y python3-pip\")",
+      "Bash(wsl bash:*)",
+      "Bash(python scripts/generate_index.py:*)",
+      "Bash(chmod:*)"
+    ]
+  }
+}

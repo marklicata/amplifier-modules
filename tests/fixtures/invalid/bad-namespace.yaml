@@ -1,0 +1,16 @@
+name: amplifier-bad-namespace
+version: 1.0.0
+description: Module using reserved namespace without permission
+
+author:
+  name: Community Author
+  github: communitydev
+
+module_type: agent
+entry_point: bad_namespace:BadAgent
+
+repository:
+  type: git
+  url: https://github.com/communitydev/bad-module
+
+status: active

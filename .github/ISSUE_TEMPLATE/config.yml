@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Module Support
+    url: https://github.com/microsoft/amplifier-foundation/discussions
+    about: For questions about using modules or amplifier-foundation
+  - name: Security Vulnerability
+    url: mailto:security@microsoft.com
+    about: Report security vulnerabilities privately
+  - name: Module Repository Issues
+    url: https://github.com/microsoft/amplifier-modules/issues/new/choose
+    about: Report issues with specific modules to their repositories

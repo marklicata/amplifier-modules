@@ -1,0 +1,94 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2025-12-16T18:01:42.519417+00:00",
+  "total_modules": 3,
+  "modules": {
+    "approval-gate": {
+      "latest": "0.5.0",
+      "description": "Reusable behavior for adding human approval gates to agent workflows with customizable prompts and timeout handling",
+      "module_type": "behavior",
+      "author": "DevToolsContributor",
+      "author_github": "devtoolscontributor",
+      "verified": false,
+      "status": "active",
+      "tags": [
+        "workflow",
+        "approval",
+        "human-in-the-loop",
+        "control-flow"
+      ],
+      "downloads": 0,
+      "versions": [
+        "0.5.0"
+      ],
+      "license": "MIT",
+      "foundation_version": ">=0.1.0"
+    },
+    "hello-world": {
+      "latest": "1.0.0",
+      "description": "Minimal embedded example agent demonstrating the simplest possible Amplifier module with source included",
+      "module_type": "agent",
+      "author": "Amplifier Team",
+      "author_github": "microsoft",
+      "verified": false,
+      "status": "active",
+      "tags": [
+        "example",
+        "tutorial",
+        "getting-started"
+      ],
+      "downloads": 0,
+      "versions": [
+        "1.0.0"
+      ],
+      "license": "MIT",
+      "foundation_version": ">=0.1.0"
+    },
+    "code-reviewer": {
+      "latest": "1.0.0",
+      "description": "Automated code review agent that analyzes code quality, style, and potential issues",
+      "module_type": "agent",
+      "author": "Amplifier Team",
+      "author_github": "microsoft",
+      "verified": true,
+      "status": "active",
+      "tags": [
+        "code-quality",
+        "automation",
+        "review",
+        "linting"
+      ],
+      "downloads": 0,
+      "versions": [
+        "1.0.0"
+      ],
+      "license": "MIT",
+      "foundation_version": ">=0.1.0"
+    }
+  },
+  "namespaces": {
+    "reserved": [
+      "amplifier",
+      "amp",
+      "microsoft",
+      "msft",
+      "azure",
+      "official",
+      "core",
+      "foundation"
+    ],
+    "claimed": {
+      "approval": "devtoolscontributor",
+      "hello": "microsoft",
+      "code": "microsoft"
+    }
+  },
+  "stats": {
+    "by_type": {
+      "behavior": 1,
+      "agent": 2
+    },
+    "verified_count": 1,
+    "community_count": 2
+  }
+}

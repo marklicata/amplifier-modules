@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/microsoft/amplifier-modules/schemas/registry-index.schema.json",
+  "title": "Amplifier Module Registry Index",
+  "description": "Schema for the central registry index file",
+  "type": "object",
+  "required": ["version", "generated_at", "modules"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "Registry schema version"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When this index was last generated"
+    },
+    "total_modules": {
+      "type": "integer",
+      "description": "Total number of modules in registry"
+    },
+    "modules": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["latest", "versions"],
+        "properties": {
+          "latest": {
+            "type": "string",
+            "description": "Latest stable version"
+          },
+          "description": {
+            "type": "string"
+          },
+          "module_type": {
+            "type": "string",
+            "enum": ["agent", "behavior", "provider", "bundle", "context"]
+          },
+          "author": {
+            "type": "string"
+          },
+          "verified": {
+            "type": "boolean"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["active", "deprecated", "broken", "archived"]
+          },
+          "tags": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "downloads": {
+            "type": "integer"
+          },
+          "versions": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "All available versions"
+          }
+        }
+      }
+    },
+    "namespaces": {
+      "type": "object",
+      "description": "Reserved namespace mappings",
+      "properties": {
+        "reserved": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Namespaces reserved for official use"
+        },
+        "claimed": {
+          "type": "object",
+          "additionalProperties": { "type": "string" },
+          "description": "Namespace -> owner GitHub username mapping"
+        }
+      }
+    }
+  }
+}
