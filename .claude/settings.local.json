@@ -7,7 +7,21 @@
       "Bash(wsl bash -c \"sudo apt update && sudo apt install -y python3-pip\")",
       "Bash(wsl bash:*)",
       "Bash(python scripts/generate_index.py:*)",
-      "Bash(chmod:*)"
+      "Bash(chmod:*)",
+      "Bash(gh issue create:*)",
+      "Bash(git checkout:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(gh pr merge:*)",
+      "Bash(git pull:*)",
+      "Bash(gh issue close:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(mkdir:*)",
+      "Bash(while read manifest)",
+      "Bash(do echo \"Validating: $manifest\")",
+      "Bash(python scripts/validate_manifest.py:*)",
+      "Bash(done)"
     ]
   }
 }
