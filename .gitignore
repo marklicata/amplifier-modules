@@ -25,6 +25,8 @@ env/
 *.swo
 *~
 .DS_Store
+.claude/
+.github/
 
 # Distribution / packaging
 build/

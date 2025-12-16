@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)](https://github.com/microsoft/amplifier-modules/actions)
-[![Modules](https://img.shields.io/badge/modules-3-blue.svg)](./registry)
+[![Modules](https://img.shields.io/badge/modules-23-blue.svg)](./registry)
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 
 Official module registry for [amplifier-foundation](https://github.com/microsoft/amplifier-foundation) — Microsoft's Python framework for building modular, agent-driven AI applications.
@@ -15,10 +15,34 @@ This repository serves as the central registry for discovering, sharing, and ins
 
 ### Browse Modules
 
-**Current Modules**: 3 (1 verified, 2 community)
+**Current Modules**: 23 (19 verified, 4 community)
+
+**Verified Modules** (19):
 - ✓ [code-reviewer](./registry/verified/code-reviewer) — Automated code review agent
+- ✓ [loop-streaming](./registry/verified/loop-streaming) — Token-by-token streaming orchestration
+- ✓ [loop-basic](./registry/verified/loop-basic) — Standard deterministic orchestration
+- ✓ [context-simple](./registry/verified/context-simple) — Lightweight conversation state management
+- ✓ [tool-filesystem](./registry/verified/tool-filesystem) — File read/write/edit operations
+- ✓ [tool-bash](./registry/verified/tool-bash) — Shell command execution
+- ✓ [tool-web](./registry/verified/tool-web) — Web search and content fetching
+- ✓ [tool-search](./registry/verified/tool-search) — Grep and glob file discovery
+- ✓ [tool-task](./registry/verified/tool-task) — Task delegation with sub-sessions
+- ✓ [tool-todo](./registry/verified/tool-todo) — AI self-accountability and task tracking
+- ✓ [hooks-streaming-ui](./registry/verified/hooks-streaming-ui) — Display streaming LLM output
+- ✓ [hooks-logging](./registry/verified/hooks-logging) — Lifecycle event logging
+- ✓ [hooks-todo-reminder](./registry/verified/hooks-todo-reminder) — Todo list context reminders
+- ✓ [hooks-status-context](./registry/verified/hooks-status-context) — Environment and git status injection
+- ✓ [hooks-redaction](./registry/verified/hooks-redaction) — PII and secret masking
+- ✓ [provider-anthropic](./registry/verified/provider-anthropic) — Claude 4 series integration
+- ✓ [provider-mock](./registry/verified/provider-mock) — Testing provider with mock responses
+- ✓ [provider-openai](./registry/verified/provider-openai) — GPT-4/5 integration
+- ✓ [provider-azure-openai](./registry/verified/provider-azure-openai) — Azure OpenAI Service integration
+
+**Community Modules** (4):
 - [approval-gate](./registry/modules/approval-gate) — Human approval gates for workflows
 - [hello-world](./registry/modules/hello-world) — Minimal embedded example
+- [tool-skills](./registry/modules/tool-skills) — Domain knowledge loading (by robotdad)
+- [tool-mcp](./registry/modules/tool-mcp) — Model Context Protocol integration (by robotdad)
 
 Browse the [`registry/`](./registry) directory or check [`registry/index.json`](./registry/index.json) for the complete listing.
 
@@ -156,7 +180,7 @@ pytest -v
 - [x] Validation scripts with comprehensive checks
 - [x] GitHub Actions CI/CD (PR validation, publishing, testing)
 - [x] Registry structure (modules + verified directories)
-- [x] Example modules (code-reviewer, approval-gate, hello-world)
+- [x] Core module collection (23 modules: orchestrators, tools, hooks, providers, context)
 - [x] Testing infrastructure (pytest, fixtures, 80%+ coverage target)
 - [x] Governance documentation
 - [x] Breaking change detection (weekly automated checks)
