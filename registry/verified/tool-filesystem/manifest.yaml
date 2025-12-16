@@ -1,48 +1,40 @@
 name: tool-filesystem
 version: 1.0.0
-description: Filesystem tools module enabling agents to read, write, and edit files within configured safe paths with line numbering and string replacement
-
+description: Filesystem tools module enabling agents to read, write, and edit files
+  within configured safe paths with line numbering and string replacement
+source: git+https://github.com/microsoft/amplifier-module-tool-filesystem@main
 author:
   name: Amplifier Team
   email: amplifier@microsoft.com
   github: microsoft
-
-module_type: behavior
+module_type: tool
 entry_point: amplifier_module_tool_filesystem:mount
-
 repository:
   type: git
   url: https://github.com/microsoft/amplifier-module-tool-filesystem
   branch: main
-
-foundation_version: ">=1.0.0"
-python_version: ">=3.11"
-
+foundation_version: '>=1.0.0'
+python_version: '>=3.11'
 dependencies:
   python:
-    - amplifier-core>=1.0.0
-
+  - amplifier-core>=1.0.0
 capabilities:
-  - file-reading
-  - file-writing
-  - file-editing
-  - string-replacement
-
+- file-reading
+- file-writing
+- file-editing
+- string-replacement
 tags:
-  - tools
-  - filesystem
-  - file-operations
-  - io
-
+- tools
+- filesystem
+- file-operations
+- io
 license: MIT
 homepage: https://github.com/microsoft/amplifier-module-tool-filesystem#readme
-
 keywords:
-  - filesystem
-  - files
-  - read
-  - write
-  - edit
-
+- filesystem
+- files
+- read
+- write
+- edit
 status: active
 verified: true

@@ -1,46 +1,38 @@
 name: tool-skills
 version: 0.1.0
-description: Tool for loading domain knowledge from skills in Amplifier with progressive disclosure through metadata, content, and reference levels
-
+description: Tool for loading domain knowledge from skills in Amplifier with progressive
+  disclosure through metadata, content, and reference levels
+source: git+https://github.com/robotdad/amplifier-module-tool-skills@main
 author:
   name: robotdad
   github: robotdad
-
-module_type: behavior
+module_type: tool
 entry_point: amplifier_module_tool_skills:mount
-
 repository:
   type: git
   url: https://github.com/robotdad/amplifier-module-tool-skills
   branch: main
-
-foundation_version: ">=1.0.0"
-python_version: ">=3.11"
-
+foundation_version: '>=1.0.0'
+python_version: '>=3.11'
 dependencies:
   python:
-    - amplifier-core>=1.0.0
-
+  - amplifier-core>=1.0.0
 capabilities:
-  - skill-loading
-  - domain-knowledge
-  - progressive-disclosure
-
+- skill-loading
+- domain-knowledge
+- progressive-disclosure
 tags:
-  - tools
-  - skills
-  - knowledge
-  - domain
-  - learning
-
+- tools
+- skills
+- knowledge
+- domain
+- learning
 license: MIT
 homepage: https://github.com/robotdad/amplifier-module-tool-skills#readme
-
 keywords:
-  - skills
-  - knowledge
-  - domain
-  - anthropic
-  - learning
-
+- skills
+- knowledge
+- domain
+- anthropic
+- learning
 status: active

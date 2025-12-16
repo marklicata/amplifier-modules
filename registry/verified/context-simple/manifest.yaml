@@ -1,46 +1,38 @@
 name: context-simple
 version: 1.0.0
-description: Basic message list context manager providing lightweight in-memory conversation state management with automatic token-based compaction
-
+description: Basic message list context manager providing lightweight in-memory conversation
+  state management with automatic token-based compaction
+source: git+https://github.com/microsoft/amplifier-module-context-simple@main
 author:
   name: Amplifier Team
   email: amplifier@microsoft.com
   github: microsoft
-
 module_type: context
 entry_point: amplifier_module_context_simple:mount
-
 repository:
   type: git
   url: https://github.com/microsoft/amplifier-module-context-simple
   branch: main
-
-foundation_version: ">=1.0.0"
-python_version: ">=3.11"
-
+foundation_version: '>=1.0.0'
+python_version: '>=3.11'
 dependencies:
   python:
-    - amplifier-core>=1.0.0
-
+  - amplifier-core>=1.0.0
 capabilities:
-  - context-management
-  - conversation-state
-  - automatic-compaction
-
+- context-management
+- conversation-state
+- automatic-compaction
 tags:
-  - context
-  - memory
-  - conversation
-  - lightweight
-
+- context
+- memory
+- conversation
+- lightweight
 license: MIT
 homepage: https://github.com/microsoft/amplifier-module-context-simple#readme
-
 keywords:
-  - context-manager
-  - conversation
-  - in-memory
-  - simple
-
+- context-manager
+- conversation
+- in-memory
+- simple
 status: active
 verified: true

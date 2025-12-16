@@ -1,50 +1,42 @@
 name: provider-anthropic
 version: 1.0.0
-description: Anthropic Claude model integration providing access to Claude 4 series models including Sonnet, Opus, and Haiku with streaming and tool use
-
+description: Anthropic Claude model integration providing access to Claude 4 series
+  models including Sonnet, Opus, and Haiku with streaming and tool use
+source: git+https://github.com/microsoft/amplifier-module-provider-anthropic@main
 author:
   name: Amplifier Team
   email: amplifier@microsoft.com
   github: microsoft
-
 module_type: provider
 entry_point: amplifier_module_provider_anthropic:mount
-
 repository:
   type: git
   url: https://github.com/microsoft/amplifier-module-provider-anthropic
   branch: main
-
-foundation_version: ">=1.0.0"
-python_version: ">=3.11"
-
+foundation_version: '>=1.0.0'
+python_version: '>=3.11'
 dependencies:
   python:
-    - amplifier-core>=1.0.0
-    - anthropic>=0.25.0
-
+  - amplifier-core>=1.0.0
+  - anthropic>=0.25.0
 capabilities:
-  - llm-inference
-  - streaming
-  - tool-calling
-  - vision
-
+- llm-inference
+- streaming
+- tool-calling
+- vision
 tags:
-  - provider
-  - llm
-  - anthropic
-  - claude
-  - ai
-
+- provider
+- llm
+- anthropic
+- claude
+- ai
 license: MIT
 homepage: https://github.com/microsoft/amplifier-module-provider-anthropic#readme
-
 keywords:
-  - anthropic
-  - claude
-  - llm
-  - provider
-  - ai
-
+- anthropic
+- claude
+- llm
+- provider
+- ai
 status: active
 verified: true

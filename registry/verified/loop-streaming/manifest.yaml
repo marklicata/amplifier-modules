@@ -1,46 +1,38 @@
 name: loop-streaming
 version: 1.0.0
-description: Streaming orchestration loop that delivers LLM responses token-by-token for improved perceived performance and real-time user experience
-
+description: Streaming orchestration loop that delivers LLM responses token-by-token
+  for improved perceived performance and real-time user experience
+source: git+https://github.com/microsoft/amplifier-module-loop-streaming@main
 author:
   name: Amplifier Team
   email: amplifier@microsoft.com
   github: microsoft
-
-module_type: behavior
+module_type: orchestrator
 entry_point: amplifier_module_loop_streaming:mount
-
 repository:
   type: git
   url: https://github.com/microsoft/amplifier-module-loop-streaming
   branch: main
-
-foundation_version: ">=1.0.0"
-python_version: ">=3.11"
-
+foundation_version: '>=1.0.0'
+python_version: '>=3.11'
 dependencies:
   python:
-    - amplifier-core>=1.0.0
-
+  - amplifier-core>=1.0.0
 capabilities:
-  - streaming
-  - orchestration
-  - token-level-rendering
-
+- streaming
+- orchestration
+- token-level-rendering
 tags:
-  - orchestrator
-  - streaming
-  - performance
-  - real-time
-
+- orchestrator
+- streaming
+- performance
+- real-time
 license: MIT
 homepage: https://github.com/microsoft/amplifier-module-loop-streaming#readme
-
 keywords:
-  - streaming
-  - orchestration
-  - loop
-  - progressive-rendering
-
+- streaming
+- orchestration
+- loop
+- progressive-rendering
 status: active
 verified: true

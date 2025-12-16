@@ -1,48 +1,40 @@
 name: provider-mock
 version: 1.0.0
-description: Mock provider with pre-configured responses for testing and development without calling real LLM APIs, supporting simulated tool calls
-
+description: Mock provider with pre-configured responses for testing and development
+  without calling real LLM APIs, supporting simulated tool calls
+source: git+https://github.com/microsoft/amplifier-module-provider-mock@main
 author:
   name: Amplifier Team
   email: amplifier@microsoft.com
   github: microsoft
-
 module_type: provider
 entry_point: amplifier_module_provider_mock:mount
-
 repository:
   type: git
   url: https://github.com/microsoft/amplifier-module-provider-mock
   branch: main
-
-foundation_version: ">=1.0.0"
-python_version: ">=3.11"
-
+foundation_version: '>=1.0.0'
+python_version: '>=3.11'
 dependencies:
   python:
-    - amplifier-core>=1.0.0
-
+  - amplifier-core>=1.0.0
 capabilities:
-  - mock-responses
-  - testing
-  - development
-
+- mock-responses
+- testing
+- development
 tags:
-  - provider
-  - mock
-  - testing
-  - development
-  - simulation
-
+- provider
+- mock
+- testing
+- development
+- simulation
 license: MIT
 homepage: https://github.com/microsoft/amplifier-module-provider-mock#readme
-
 keywords:
-  - mock
-  - testing
-  - development
-  - simulation
-  - provider
-
+- mock
+- testing
+- development
+- simulation
+- provider
 status: active
 verified: true

@@ -1,49 +1,41 @@
 name: tool-task
 version: 1.0.0
-description: Task delegation tool enabling agents to spawn specialized sub-sessions for complex subtasks with isolated contexts and session resumption
-
+description: Task delegation tool enabling agents to spawn specialized sub-sessions
+  for complex subtasks with isolated contexts and session resumption
+source: git+https://github.com/microsoft/amplifier-module-tool-task@main
 author:
   name: Amplifier Team
   email: amplifier@microsoft.com
   github: microsoft
-
-module_type: behavior
+module_type: tool
 entry_point: amplifier_module_tool_task:mount
-
 repository:
   type: git
   url: https://github.com/microsoft/amplifier-module-tool-task
   branch: main
-
-foundation_version: ">=1.0.0"
-python_version: ">=3.11"
-
+foundation_version: '>=1.0.0'
+python_version: '>=3.11'
 dependencies:
   python:
-    - amplifier-core>=1.0.0
-
+  - amplifier-core>=1.0.0
 capabilities:
-  - task-delegation
-  - sub-sessions
-  - context-isolation
-  - session-resumption
-
+- task-delegation
+- sub-sessions
+- context-isolation
+- session-resumption
 tags:
-  - tools
-  - task
-  - delegation
-  - sub-agents
-  - autonomy
-
+- tools
+- task
+- delegation
+- sub-agents
+- autonomy
 license: MIT
 homepage: https://github.com/microsoft/amplifier-module-tool-task#readme
-
 keywords:
-  - task
-  - delegation
-  - sub-agent
-  - autonomous
-  - orchestration
-
+- task
+- delegation
+- sub-agent
+- autonomous
+- orchestration
 status: active
 verified: true

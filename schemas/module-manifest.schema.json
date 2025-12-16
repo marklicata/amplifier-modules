@@ -4,7 +4,7 @@
   "title": "Amplifier Module Manifest",
   "description": "Schema for amplifier-foundation module manifests",
   "type": "object",
-  "required": ["name", "version", "description", "author", "module_type", "entry_point"],
+  "required": ["name", "version", "description", "author", "module_type", "entry_point", "source"],
   "properties": {
     "name": {
       "type": "string",
@@ -12,6 +12,11 @@
       "minLength": 3,
       "maxLength": 64,
       "description": "Unique module identifier (lowercase, hyphens allowed, must start with letter)"
+    },
+    "source": {
+      "type": "string",
+      "pattern": "^(git\\+https://[^@]+@[^@]+|embedded)$",
+      "description": "Installation source URL in pip format (e.g., git+https://github.com/user/repo@main) or 'embedded' for bundled modules"
     },
     "version": {
       "type": "string",
@@ -46,7 +51,7 @@
     },
     "module_type": {
       "type": "string",
-      "enum": ["agent", "behavior", "provider", "bundle", "context"],
+      "enum": ["tool", "provider", "hook", "orchestrator", "context"],
       "description": "Type of amplifier-foundation module"
     },
     "entry_point": {

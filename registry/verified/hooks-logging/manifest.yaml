@@ -1,48 +1,40 @@
 name: hooks-logging
 version: 1.0.0
-description: Lifecycle event logging hook providing visibility into agent execution including session lifecycle, tool invocations, and errors
-
+description: Lifecycle event logging hook providing visibility into agent execution
+  including session lifecycle, tool invocations, and errors
+source: git+https://github.com/microsoft/amplifier-module-hooks-logging@main
 author:
   name: Amplifier Team
   email: amplifier@microsoft.com
   github: microsoft
-
-module_type: behavior
+module_type: hook
 entry_point: amplifier_module_hooks_logging:mount
-
 repository:
   type: git
   url: https://github.com/microsoft/amplifier-module-hooks-logging
   branch: main
-
-foundation_version: ">=1.0.0"
-python_version: ">=3.11"
-
+foundation_version: '>=1.0.0'
+python_version: '>=3.11'
 dependencies:
   python:
-    - amplifier-core>=1.0.0
-
+  - amplifier-core>=1.0.0
 capabilities:
-  - event-logging
-  - observability
-  - lifecycle-tracking
-
+- event-logging
+- observability
+- lifecycle-tracking
 tags:
-  - hooks
-  - logging
-  - observability
-  - debugging
-  - monitoring
-
+- hooks
+- logging
+- observability
+- debugging
+- monitoring
 license: MIT
 homepage: https://github.com/microsoft/amplifier-module-hooks-logging#readme
-
 keywords:
-  - logging
-  - events
-  - lifecycle
-  - observability
-  - monitoring
-
+- logging
+- events
+- lifecycle
+- observability
+- monitoring
 status: active
 verified: true

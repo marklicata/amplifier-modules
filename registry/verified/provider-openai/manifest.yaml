@@ -1,50 +1,42 @@
 name: provider-openai
 version: 1.0.0
-description: OpenAI provider integration enabling access to GPT-5 and GPT-4 models through the Responses API with reasoning control and tool calling
-
+description: OpenAI provider integration enabling access to GPT-5 and GPT-4 models
+  through the Responses API with reasoning control and tool calling
+source: git+https://github.com/microsoft/amplifier-module-provider-openai@main
 author:
   name: Amplifier Team
   email: amplifier@microsoft.com
   github: microsoft
-
 module_type: provider
 entry_point: amplifier_module_provider_openai:mount
-
 repository:
   type: git
   url: https://github.com/microsoft/amplifier-module-provider-openai
   branch: main
-
-foundation_version: ">=1.0.0"
-python_version: ">=3.11"
-
+foundation_version: '>=1.0.0'
+python_version: '>=3.11'
 dependencies:
   python:
-    - amplifier-core>=1.0.0
-    - openai>=1.0.0
-
+  - amplifier-core>=1.0.0
+  - openai>=1.0.0
 capabilities:
-  - llm-inference
-  - reasoning-control
-  - tool-calling
-  - streaming
-
+- llm-inference
+- reasoning-control
+- tool-calling
+- streaming
 tags:
-  - provider
-  - llm
-  - openai
-  - gpt
-  - ai
-
+- provider
+- llm
+- openai
+- gpt
+- ai
 license: MIT
 homepage: https://github.com/microsoft/amplifier-module-provider-openai#readme
-
 keywords:
-  - openai
-  - gpt
-  - llm
-  - provider
-  - ai
-
+- openai
+- gpt
+- llm
+- provider
+- ai
 status: active
 verified: true

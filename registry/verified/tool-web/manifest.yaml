@@ -1,51 +1,43 @@
 name: tool-web
 version: 1.0.0
-description: Web tools for searching and fetching content from the internet using DuckDuckGo search and HTML parsing capabilities
-
+description: Web tools for searching and fetching content from the internet using
+  DuckDuckGo search and HTML parsing capabilities
+source: git+https://github.com/microsoft/amplifier-module-tool-web@main
 author:
   name: Amplifier Team
   email: amplifier@microsoft.com
   github: microsoft
-
-module_type: behavior
+module_type: tool
 entry_point: amplifier_module_tool_web:mount
-
 repository:
   type: git
   url: https://github.com/microsoft/amplifier-module-tool-web
   branch: main
-
-foundation_version: ">=1.0.0"
-python_version: ">=3.11"
-
+foundation_version: '>=1.0.0'
+python_version: '>=3.11'
 dependencies:
   python:
-    - amplifier-core>=1.0.0
-    - ddgs
-    - aiohttp
-    - beautifulsoup4
-
+  - amplifier-core>=1.0.0
+  - ddgs
+  - aiohttp
+  - beautifulsoup4
 capabilities:
-  - web-search
-  - web-fetch
-  - html-parsing
-
+- web-search
+- web-fetch
+- html-parsing
 tags:
-  - tools
-  - web
-  - search
-  - http
-  - internet
-
+- tools
+- web
+- search
+- http
+- internet
 license: MIT
 homepage: https://github.com/microsoft/amplifier-module-tool-web#readme
-
 keywords:
-  - web
-  - search
-  - fetch
-  - http
-  - duckduckgo
-
+- web
+- search
+- fetch
+- http
+- duckduckgo
 status: active
 verified: true

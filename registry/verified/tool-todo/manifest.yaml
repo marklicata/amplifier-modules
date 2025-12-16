@@ -1,48 +1,40 @@
 name: tool-todo
 version: 1.0.0
-description: AI self-accountability tool for managing todo lists and preventing context-related task abandonment during complex multi-step operations
-
+description: AI self-accountability tool for managing todo lists and preventing context-related
+  task abandonment during complex multi-step operations
+source: git+https://github.com/microsoft/amplifier-module-tool-todo@main
 author:
   name: Amplifier Team
   email: amplifier@microsoft.com
   github: microsoft
-
-module_type: behavior
+module_type: tool
 entry_point: amplifier_module_tool_todo:mount
-
 repository:
   type: git
   url: https://github.com/microsoft/amplifier-module-tool-todo
   branch: main
-
-foundation_version: ">=1.0.0"
-python_version: ">=3.11"
-
+foundation_version: '>=1.0.0'
+python_version: '>=3.11'
 dependencies:
   python:
-    - amplifier-core>=1.0.0
-
+  - amplifier-core>=1.0.0
 capabilities:
-  - task-tracking
-  - todo-management
-  - progress-monitoring
-
+- task-tracking
+- todo-management
+- progress-monitoring
 tags:
-  - tools
-  - todo
-  - task-management
-  - accountability
-  - planning
-
+- tools
+- todo
+- task-management
+- accountability
+- planning
 license: MIT
 homepage: https://github.com/microsoft/amplifier-module-tool-todo#readme
-
 keywords:
-  - todo
-  - task
-  - tracking
-  - accountability
-  - planning
-
+- todo
+- task
+- tracking
+- accountability
+- planning
 status: active
 verified: true

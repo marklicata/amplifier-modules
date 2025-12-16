@@ -1,48 +1,40 @@
 name: hooks-redaction
 version: 1.0.0
-description: Masks secrets and PII before logging by detecting and redacting sensitive patterns including emails, phone numbers, and credit cards
-
+description: Masks secrets and PII before logging by detecting and redacting sensitive
+  patterns including emails, phone numbers, and credit cards
+source: git+https://github.com/microsoft/amplifier-module-hooks-redaction@main
 author:
   name: Amplifier Team
   email: amplifier@microsoft.com
   github: microsoft
-
-module_type: behavior
+module_type: hook
 entry_point: amplifier_module_hooks_redaction:mount
-
 repository:
   type: git
   url: https://github.com/microsoft/amplifier-module-hooks-redaction
   branch: main
-
-foundation_version: ">=1.0.0"
-python_version: ">=3.11"
-
+foundation_version: '>=1.0.0'
+python_version: '>=3.11'
 dependencies:
   python:
-    - amplifier-core>=1.0.0
-
+  - amplifier-core>=1.0.0
 capabilities:
-  - data-protection
-  - pii-redaction
-  - secret-masking
-
+- data-protection
+- pii-redaction
+- secret-masking
 tags:
-  - hooks
-  - security
-  - privacy
-  - redaction
-  - pii
-
+- hooks
+- security
+- privacy
+- redaction
+- pii
 license: MIT
 homepage: https://github.com/microsoft/amplifier-module-hooks-redaction#readme
-
 keywords:
-  - redaction
-  - security
-  - privacy
-  - pii
-  - secrets
-
+- redaction
+- security
+- privacy
+- pii
+- secrets
 status: active
 verified: true

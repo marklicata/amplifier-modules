@@ -1,48 +1,40 @@
 name: hooks-status-context
 version: 1.0.0
-description: Injects environment information and optional git status into agent context before each prompt for better decision-making awareness
-
+description: Injects environment information and optional git status into agent context
+  before each prompt for better decision-making awareness
+source: git+https://github.com/microsoft/amplifier-module-hooks-status-context@main
 author:
   name: Amplifier Team
   email: amplifier@microsoft.com
   github: microsoft
-
-module_type: behavior
+module_type: hook
 entry_point: amplifier_module_hooks_status_context:mount
-
 repository:
   type: git
   url: https://github.com/microsoft/amplifier-module-hooks-status-context
   branch: main
-
-foundation_version: ">=1.0.0"
-python_version: ">=3.11"
-
+foundation_version: '>=1.0.0'
+python_version: '>=3.11'
 dependencies:
   python:
-    - amplifier-core>=1.0.0
-
+  - amplifier-core>=1.0.0
 capabilities:
-  - context-injection
-  - environment-info
-  - git-status
-
+- context-injection
+- environment-info
+- git-status
 tags:
-  - hooks
-  - context
-  - environment
-  - git
-  - status
-
+- hooks
+- context
+- environment
+- git
+- status
 license: MIT
 homepage: https://github.com/microsoft/amplifier-module-hooks-status-context#readme
-
 keywords:
-  - context
-  - environment
-  - git
-  - status
-  - awareness
-
+- context
+- environment
+- git
+- status
+- awareness
 status: active
 verified: true

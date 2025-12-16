@@ -1,46 +1,38 @@
 name: loop-basic
 version: 1.0.0
-description: Standard deterministic orchestration loop for AI agents with parallel tool execution and ordered context updates
-
+description: Standard deterministic orchestration loop for AI agents with parallel
+  tool execution and ordered context updates
+source: git+https://github.com/microsoft/amplifier-module-loop-basic@main
 author:
   name: Amplifier Team
   email: amplifier@microsoft.com
   github: microsoft
-
-module_type: behavior
+module_type: orchestrator
 entry_point: amplifier_module_loop_basic:mount
-
 repository:
   type: git
   url: https://github.com/microsoft/amplifier-module-loop-basic
   branch: main
-
-foundation_version: ">=1.0.0"
-python_version: ">=3.11"
-
+foundation_version: '>=1.0.0'
+python_version: '>=3.11'
 dependencies:
   python:
-    - amplifier-core>=1.0.0
-
+  - amplifier-core>=1.0.0
 capabilities:
-  - orchestration
-  - parallel-execution
-  - error-handling
-
+- orchestration
+- parallel-execution
+- error-handling
 tags:
-  - orchestrator
-  - agent-loop
-  - default
-  - deterministic
-
+- orchestrator
+- agent-loop
+- default
+- deterministic
 license: MIT
 homepage: https://github.com/microsoft/amplifier-module-loop-basic#readme
-
 keywords:
-  - orchestration
-  - agent
-  - loop
-  - basic
-
+- orchestration
+- agent
+- loop
+- basic
 status: active
 verified: true
