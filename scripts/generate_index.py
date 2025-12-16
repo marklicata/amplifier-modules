@@ -110,6 +110,7 @@ def load_module_manifest(module_dir: Path, verified: bool) -> Optional[dict]:
         "latest": versions[0] if versions else manifest.get("version"),
         "description": manifest.get("description", ""),
         "module_type": manifest.get("module_type"),
+        "source": manifest.get("source"),
         "author": manifest.get("author", {}).get("name", "Unknown"),
         "author_github": manifest.get("author", {}).get("github"),
         "verified": verified,
