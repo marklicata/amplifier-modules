@@ -1,0 +1,46 @@
+name: tool-mcp
+version: 0.1.0
+description: Model Context Protocol integration module enabling connection to MCP servers and exposing their tools, resources, and prompts to agents
+
+author:
+  name: robotdad
+  github: robotdad
+
+module_type: behavior
+entry_point: amplifier_module_tool_mcp:mount
+
+repository:
+  type: git
+  url: https://github.com/robotdad/amplifier-module-tool-mcp
+  branch: main
+
+foundation_version: ">=1.0.0"
+python_version: ">=3.11"
+
+dependencies:
+  python:
+    - amplifier-core>=1.0.0
+
+capabilities:
+  - mcp-integration
+  - protocol-bridge
+  - tool-orchestration
+
+tags:
+  - tools
+  - mcp
+  - protocol
+  - integration
+  - orchestration
+
+license: MIT
+homepage: https://github.com/robotdad/amplifier-module-tool-mcp#readme
+
+keywords:
+  - mcp
+  - model-context-protocol
+  - integration
+  - tools
+  - orchestration
+
+status: active

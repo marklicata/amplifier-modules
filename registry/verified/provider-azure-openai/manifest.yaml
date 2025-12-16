@@ -1,0 +1,50 @@
+name: provider-azure-openai
+version: 1.0.0
+description: Azure OpenAI Service integration with deployment name mapping and multiple authentication options including managed identity support
+
+author:
+  name: Amplifier Team
+  email: amplifier@microsoft.com
+  github: microsoft
+
+module_type: provider
+entry_point: amplifier_module_provider_azure_openai:mount
+
+repository:
+  type: git
+  url: https://github.com/microsoft/amplifier-module-provider-azure-openai
+  branch: main
+
+foundation_version: ">=1.0.0"
+python_version: ">=3.11"
+
+dependencies:
+  python:
+    - amplifier-core>=1.0.0
+    - openai>=1.0.0
+
+capabilities:
+  - llm-inference
+  - azure-integration
+  - managed-identity
+  - tool-calling
+
+tags:
+  - provider
+  - llm
+  - azure
+  - openai
+  - enterprise
+
+license: MIT
+homepage: https://github.com/microsoft/amplifier-module-provider-azure-openai#readme
+
+keywords:
+  - azure
+  - openai
+  - llm
+  - provider
+  - enterprise
+
+status: active
+verified: true

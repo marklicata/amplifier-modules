@@ -1,0 +1,49 @@
+name: tool-search
+version: 1.0.0
+description: Self-contained search tools providing grep and glob functionality for file discovery and content searching with regex support
+
+author:
+  name: Amplifier Team
+  email: amplifier@microsoft.com
+  github: microsoft
+
+module_type: behavior
+entry_point: amplifier_module_tool_search:mount
+
+repository:
+  type: git
+  url: https://github.com/microsoft/amplifier-module-tool-search
+  branch: main
+
+foundation_version: ">=1.0.0"
+python_version: ">=3.11"
+
+dependencies:
+  python:
+    - amplifier-core>=1.0.0
+
+capabilities:
+  - file-search
+  - content-search
+  - regex-matching
+  - glob-patterns
+
+tags:
+  - tools
+  - search
+  - grep
+  - glob
+  - file-discovery
+
+license: MIT
+homepage: https://github.com/microsoft/amplifier-module-tool-search#readme
+
+keywords:
+  - search
+  - grep
+  - glob
+  - regex
+  - ripgrep
+
+status: active
+verified: true

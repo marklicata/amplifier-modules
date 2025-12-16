@@ -1,28 +1,8 @@
 {
   "version": "1.0.0",
-  "generated_at": "2025-12-16T18:53:48.395007+00:00",
-  "total_modules": 3,
+  "generated_at": "2025-12-16T21:06:52.368250+00:00",
+  "total_modules": 23,
   "modules": {
-    "hello-world": {
-      "latest": "1.0.0",
-      "description": "Minimal embedded example agent demonstrating the simplest possible Amplifier module with source included",
-      "module_type": "agent",
-      "author": "Amplifier Team",
-      "author_github": "microsoft",
-      "verified": false,
-      "status": "active",
-      "tags": [
-        "example",
-        "tutorial",
-        "getting-started"
-      ],
-      "downloads": 0,
-      "versions": [
-        "1.0.0"
-      ],
-      "license": "MIT",
-      "foundation_version": ">=0.1.0"
-    },
     "approval-gate": {
       "latest": "0.5.0",
       "description": "Reusable behavior for adding human approval gates to agent workflows with customizable prompts and timeout handling",
@@ -44,6 +24,70 @@
       "license": "MIT",
       "foundation_version": ">=0.1.0"
     },
+    "hello-world": {
+      "latest": "1.0.0",
+      "description": "Minimal embedded example agent demonstrating the simplest possible Amplifier module with source included",
+      "module_type": "agent",
+      "author": "Amplifier Team",
+      "author_github": "microsoft",
+      "verified": false,
+      "status": "active",
+      "tags": [
+        "example",
+        "tutorial",
+        "getting-started"
+      ],
+      "downloads": 0,
+      "versions": [
+        "1.0.0"
+      ],
+      "license": "MIT",
+      "foundation_version": ">=0.1.0"
+    },
+    "tool-mcp": {
+      "latest": "0.1.0",
+      "description": "Model Context Protocol integration module enabling connection to MCP servers and exposing their tools, resources, and prompts to agents",
+      "module_type": "behavior",
+      "author": "robotdad",
+      "author_github": "robotdad",
+      "verified": false,
+      "status": "active",
+      "tags": [
+        "tools",
+        "mcp",
+        "protocol",
+        "integration",
+        "orchestration"
+      ],
+      "downloads": 0,
+      "versions": [
+        "0.1.0"
+      ],
+      "license": "MIT",
+      "foundation_version": ">=1.0.0"
+    },
+    "tool-skills": {
+      "latest": "0.1.0",
+      "description": "Tool for loading domain knowledge from skills in Amplifier with progressive disclosure through metadata, content, and reference levels",
+      "module_type": "behavior",
+      "author": "robotdad",
+      "author_github": "robotdad",
+      "verified": false,
+      "status": "active",
+      "tags": [
+        "tools",
+        "skills",
+        "knowledge",
+        "domain",
+        "learning"
+      ],
+      "downloads": 0,
+      "versions": [
+        "0.1.0"
+      ],
+      "license": "MIT",
+      "foundation_version": ">=1.0.0"
+    },
     "code-reviewer": {
       "latest": "1.0.0",
       "description": "Automated code review agent that analyzes code quality, style, and potential issues",
@@ -64,6 +108,398 @@
       ],
       "license": "MIT",
       "foundation_version": ">=0.1.0"
+    },
+    "context-simple": {
+      "latest": "1.0.0",
+      "description": "Basic message list context manager providing lightweight in-memory conversation state management with automatic token-based compaction",
+      "module_type": "context",
+      "author": "Amplifier Team",
+      "author_github": "microsoft",
+      "verified": true,
+      "status": "active",
+      "tags": [
+        "context",
+        "memory",
+        "conversation",
+        "lightweight"
+      ],
+      "downloads": 0,
+      "versions": [
+        "1.0.0"
+      ],
+      "license": "MIT",
+      "foundation_version": ">=1.0.0"
+    },
+    "hooks-logging": {
+      "latest": "1.0.0",
+      "description": "Lifecycle event logging hook providing visibility into agent execution including session lifecycle, tool invocations, and errors",
+      "module_type": "behavior",
+      "author": "Amplifier Team",
+      "author_github": "microsoft",
+      "verified": true,
+      "status": "active",
+      "tags": [
+        "hooks",
+        "logging",
+        "observability",
+        "debugging",
+        "monitoring"
+      ],
+      "downloads": 0,
+      "versions": [
+        "1.0.0"
+      ],
+      "license": "MIT",
+      "foundation_version": ">=1.0.0"
+    },
+    "hooks-redaction": {
+      "latest": "1.0.0",
+      "description": "Masks secrets and PII before logging by detecting and redacting sensitive patterns including emails, phone numbers, and credit cards",
+      "module_type": "behavior",
+      "author": "Amplifier Team",
+      "author_github": "microsoft",
+      "verified": true,
+      "status": "active",
+      "tags": [
+        "hooks",
+        "security",
+        "privacy",
+        "redaction",
+        "pii"
+      ],
+      "downloads": 0,
+      "versions": [
+        "1.0.0"
+      ],
+      "license": "MIT",
+      "foundation_version": ">=1.0.0"
+    },
+    "hooks-status-context": {
+      "latest": "1.0.0",
+      "description": "Injects environment information and optional git status into agent context before each prompt for better decision-making awareness",
+      "module_type": "behavior",
+      "author": "Amplifier Team",
+      "author_github": "microsoft",
+      "verified": true,
+      "status": "active",
+      "tags": [
+        "hooks",
+        "context",
+        "environment",
+        "git",
+        "status"
+      ],
+      "downloads": 0,
+      "versions": [
+        "1.0.0"
+      ],
+      "license": "MIT",
+      "foundation_version": ">=1.0.0"
+    },
+    "hooks-streaming-ui": {
+      "latest": "1.0.0",
+      "description": "Display streaming LLM output including thinking blocks, tool calls, and token usage to console with configurable formatting and truncation",
+      "module_type": "behavior",
+      "author": "Amplifier Team",
+      "author_github": "microsoft",
+      "verified": true,
+      "status": "active",
+      "tags": [
+        "hooks",
+        "streaming",
+        "ui",
+        "console",
+        "display"
+      ],
+      "downloads": 0,
+      "versions": [
+        "1.0.0"
+      ],
+      "license": "MIT",
+      "foundation_version": ">=1.0.0"
+    },
+    "hooks-todo-reminder": {
+      "latest": "1.0.0",
+      "description": "Automatically injects todo list reminders into context before each LLM request to maintain task focus and prevent incomplete work",
+      "module_type": "behavior",
+      "author": "Amplifier Team",
+      "author_github": "microsoft",
+      "verified": true,
+      "status": "active",
+      "tags": [
+        "hooks",
+        "todo",
+        "reminders",
+        "accountability",
+        "context"
+      ],
+      "downloads": 0,
+      "versions": [
+        "1.0.0"
+      ],
+      "license": "MIT",
+      "foundation_version": ">=1.0.0"
+    },
+    "loop-basic": {
+      "latest": "1.0.0",
+      "description": "Standard deterministic orchestration loop for AI agents with parallel tool execution and ordered context updates",
+      "module_type": "behavior",
+      "author": "Amplifier Team",
+      "author_github": "microsoft",
+      "verified": true,
+      "status": "active",
+      "tags": [
+        "orchestrator",
+        "agent-loop",
+        "default",
+        "deterministic"
+      ],
+      "downloads": 0,
+      "versions": [
+        "1.0.0"
+      ],
+      "license": "MIT",
+      "foundation_version": ">=1.0.0"
+    },
+    "loop-streaming": {
+      "latest": "1.0.0",
+      "description": "Streaming orchestration loop that delivers LLM responses token-by-token for improved perceived performance and real-time user experience",
+      "module_type": "behavior",
+      "author": "Amplifier Team",
+      "author_github": "microsoft",
+      "verified": true,
+      "status": "active",
+      "tags": [
+        "orchestrator",
+        "streaming",
+        "performance",
+        "real-time"
+      ],
+      "downloads": 0,
+      "versions": [
+        "1.0.0"
+      ],
+      "license": "MIT",
+      "foundation_version": ">=1.0.0"
+    },
+    "provider-anthropic": {
+      "latest": "1.0.0",
+      "description": "Anthropic Claude model integration providing access to Claude 4 series models including Sonnet, Opus, and Haiku with streaming and tool use",
+      "module_type": "provider",
+      "author": "Amplifier Team",
+      "author_github": "microsoft",
+      "verified": true,
+      "status": "active",
+      "tags": [
+        "provider",
+        "llm",
+        "anthropic",
+        "claude",
+        "ai"
+      ],
+      "downloads": 0,
+      "versions": [
+        "1.0.0"
+      ],
+      "license": "MIT",
+      "foundation_version": ">=1.0.0"
+    },
+    "provider-azure-openai": {
+      "latest": "1.0.0",
+      "description": "Azure OpenAI Service integration with deployment name mapping and multiple authentication options including managed identity support",
+      "module_type": "provider",
+      "author": "Amplifier Team",
+      "author_github": "microsoft",
+      "verified": true,
+      "status": "active",
+      "tags": [
+        "provider",
+        "llm",
+        "azure",
+        "openai",
+        "enterprise"
+      ],
+      "downloads": 0,
+      "versions": [
+        "1.0.0"
+      ],
+      "license": "MIT",
+      "foundation_version": ">=1.0.0"
+    },
+    "provider-mock": {
+      "latest": "1.0.0",
+      "description": "Mock provider with pre-configured responses for testing and development without calling real LLM APIs, supporting simulated tool calls",
+      "module_type": "provider",
+      "author": "Amplifier Team",
+      "author_github": "microsoft",
+      "verified": true,
+      "status": "active",
+      "tags": [
+        "provider",
+        "mock",
+        "testing",
+        "development",
+        "simulation"
+      ],
+      "downloads": 0,
+      "versions": [
+        "1.0.0"
+      ],
+      "license": "MIT",
+      "foundation_version": ">=1.0.0"
+    },
+    "provider-openai": {
+      "latest": "1.0.0",
+      "description": "OpenAI provider integration enabling access to GPT-5 and GPT-4 models through the Responses API with reasoning control and tool calling",
+      "module_type": "provider",
+      "author": "Amplifier Team",
+      "author_github": "microsoft",
+      "verified": true,
+      "status": "active",
+      "tags": [
+        "provider",
+        "llm",
+        "openai",
+        "gpt",
+        "ai"
+      ],
+      "downloads": 0,
+      "versions": [
+        "1.0.0"
+      ],
+      "license": "MIT",
+      "foundation_version": ">=1.0.0"
+    },
+    "tool-bash": {
+      "latest": "1.0.0",
+      "description": "Bash command execution tool enabling agents to run shell commands in a controlled environment for system interactions and automation",
+      "module_type": "behavior",
+      "author": "Amplifier Team",
+      "author_github": "microsoft",
+      "verified": true,
+      "status": "active",
+      "tags": [
+        "tools",
+        "bash",
+        "shell",
+        "command-execution",
+        "automation"
+      ],
+      "downloads": 0,
+      "versions": [
+        "1.0.0"
+      ],
+      "license": "MIT",
+      "foundation_version": ">=1.0.0"
+    },
+    "tool-filesystem": {
+      "latest": "1.0.0",
+      "description": "Filesystem tools module enabling agents to read, write, and edit files within configured safe paths with line numbering and string replacement",
+      "module_type": "behavior",
+      "author": "Amplifier Team",
+      "author_github": "microsoft",
+      "verified": true,
+      "status": "active",
+      "tags": [
+        "tools",
+        "filesystem",
+        "file-operations",
+        "io"
+      ],
+      "downloads": 0,
+      "versions": [
+        "1.0.0"
+      ],
+      "license": "MIT",
+      "foundation_version": ">=1.0.0"
+    },
+    "tool-search": {
+      "latest": "1.0.0",
+      "description": "Self-contained search tools providing grep and glob functionality for file discovery and content searching with regex support",
+      "module_type": "behavior",
+      "author": "Amplifier Team",
+      "author_github": "microsoft",
+      "verified": true,
+      "status": "active",
+      "tags": [
+        "tools",
+        "search",
+        "grep",
+        "glob",
+        "file-discovery"
+      ],
+      "downloads": 0,
+      "versions": [
+        "1.0.0"
+      ],
+      "license": "MIT",
+      "foundation_version": ">=1.0.0"
+    },
+    "tool-task": {
+      "latest": "1.0.0",
+      "description": "Task delegation tool enabling agents to spawn specialized sub-sessions for complex subtasks with isolated contexts and session resumption",
+      "module_type": "behavior",
+      "author": "Amplifier Team",
+      "author_github": "microsoft",
+      "verified": true,
+      "status": "active",
+      "tags": [
+        "tools",
+        "task",
+        "delegation",
+        "sub-agents",
+        "autonomy"
+      ],
+      "downloads": 0,
+      "versions": [
+        "1.0.0"
+      ],
+      "license": "MIT",
+      "foundation_version": ">=1.0.0"
+    },
+    "tool-todo": {
+      "latest": "1.0.0",
+      "description": "AI self-accountability tool for managing todo lists and preventing context-related task abandonment during complex multi-step operations",
+      "module_type": "behavior",
+      "author": "Amplifier Team",
+      "author_github": "microsoft",
+      "verified": true,
+      "status": "active",
+      "tags": [
+        "tools",
+        "todo",
+        "task-management",
+        "accountability",
+        "planning"
+      ],
+      "downloads": 0,
+      "versions": [
+        "1.0.0"
+      ],
+      "license": "MIT",
+      "foundation_version": ">=1.0.0"
+    },
+    "tool-web": {
+      "latest": "1.0.0",
+      "description": "Web tools for searching and fetching content from the internet using DuckDuckGo search and HTML parsing capabilities",
+      "module_type": "behavior",
+      "author": "Amplifier Team",
+      "author_github": "microsoft",
+      "verified": true,
+      "status": "active",
+      "tags": [
+        "tools",
+        "web",
+        "search",
+        "http",
+        "internet"
+      ],
+      "downloads": 0,
+      "versions": [
+        "1.0.0"
+      ],
+      "license": "MIT",
+      "foundation_version": ">=1.0.0"
     }
   },
   "namespaces": {
@@ -78,17 +514,24 @@
       "foundation"
     ],
     "claimed": {
-      "hello": "microsoft",
       "approval": "devtoolscontributor",
-      "code": "microsoft"
+      "hello": "microsoft",
+      "tool": "robotdad",
+      "code": "microsoft",
+      "context": "microsoft",
+      "hooks": "microsoft",
+      "loop": "microsoft",
+      "provider": "microsoft"
     }
   },
   "stats": {
     "by_type": {
+      "behavior": 16,
       "agent": 2,
-      "behavior": 1
+      "context": 1,
+      "provider": 4
     },
-    "verified_count": 1,
-    "community_count": 2
+    "verified_count": 19,
+    "community_count": 4
   }
 }

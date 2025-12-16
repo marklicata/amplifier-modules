@@ -1,0 +1,48 @@
+name: hooks-streaming-ui
+version: 1.0.0
+description: Display streaming LLM output including thinking blocks, tool calls, and token usage to console with configurable formatting and truncation
+
+author:
+  name: Amplifier Team
+  email: amplifier@microsoft.com
+  github: microsoft
+
+module_type: behavior
+entry_point: amplifier_module_hooks_streaming_ui:mount
+
+repository:
+  type: git
+  url: https://github.com/microsoft/amplifier-module-hooks-streaming-ui
+  branch: main
+
+foundation_version: ">=1.0.0"
+python_version: ">=3.11"
+
+dependencies:
+  python:
+    - amplifier-core>=1.0.0
+
+capabilities:
+  - streaming-display
+  - console-output
+  - observability
+
+tags:
+  - hooks
+  - streaming
+  - ui
+  - console
+  - display
+
+license: MIT
+homepage: https://github.com/microsoft/amplifier-module-hooks-streaming-ui#readme
+
+keywords:
+  - streaming
+  - ui
+  - console
+  - display
+  - observability
+
+status: active
+verified: true

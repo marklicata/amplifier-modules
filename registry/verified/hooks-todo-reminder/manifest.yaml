@@ -1,0 +1,48 @@
+name: hooks-todo-reminder
+version: 1.0.0
+description: Automatically injects todo list reminders into context before each LLM request to maintain task focus and prevent incomplete work
+
+author:
+  name: Amplifier Team
+  email: amplifier@microsoft.com
+  github: microsoft
+
+module_type: behavior
+entry_point: amplifier_module_hooks_todo_reminder:mount
+
+repository:
+  type: git
+  url: https://github.com/microsoft/amplifier-module-hooks-todo-reminder
+  branch: main
+
+foundation_version: ">=1.0.0"
+python_version: ">=3.11"
+
+dependencies:
+  python:
+    - amplifier-core>=1.0.0
+
+capabilities:
+  - context-injection
+  - task-reminders
+  - accountability
+
+tags:
+  - hooks
+  - todo
+  - reminders
+  - accountability
+  - context
+
+license: MIT
+homepage: https://github.com/microsoft/amplifier-module-hooks-todo-reminder#readme
+
+keywords:
+  - todo
+  - reminders
+  - context
+  - accountability
+  - task-tracking
+
+status: active
+verified: true

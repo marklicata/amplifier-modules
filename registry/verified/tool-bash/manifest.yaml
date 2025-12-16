@@ -1,0 +1,48 @@
+name: tool-bash
+version: 1.0.0
+description: Bash command execution tool enabling agents to run shell commands in a controlled environment for system interactions and automation
+
+author:
+  name: Amplifier Team
+  email: amplifier@microsoft.com
+  github: microsoft
+
+module_type: behavior
+entry_point: amplifier_module_tool_bash:mount
+
+repository:
+  type: git
+  url: https://github.com/microsoft/amplifier-module-tool-bash
+  branch: main
+
+foundation_version: ">=1.0.0"
+python_version: ">=3.11"
+
+dependencies:
+  python:
+    - amplifier-core>=1.0.0
+
+capabilities:
+  - shell-execution
+  - command-running
+  - system-interaction
+
+tags:
+  - tools
+  - bash
+  - shell
+  - command-execution
+  - automation
+
+license: MIT
+homepage: https://github.com/microsoft/amplifier-module-tool-bash#readme
+
+keywords:
+  - bash
+  - shell
+  - command
+  - execution
+  - terminal
+
+status: active
+verified: true
