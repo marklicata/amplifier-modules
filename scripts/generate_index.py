@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Registry index generator for amplifier-modules.
+Registry index generator for amplifier-module-registry.
 
 Scans the registry directory and generates a consolidated index.json
 for fast lookups and CLI discovery.

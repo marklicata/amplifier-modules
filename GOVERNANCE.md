@@ -1,6 +1,6 @@
 # Governance
 
-This document outlines the governance model, processes, and policies for the amplifier-modules registry.
+This document outlines the governance model, processes, and policies for the amplifier-module-registry registry.
 
 ---
 

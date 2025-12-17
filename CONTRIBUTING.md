@@ -1,6 +1,6 @@
-# Contributing to amplifier-modules
+# Contributing to amplifier-module-registry
 
-Thank you for your interest in contributing to the amplifier-modules registry! This document outlines the process for submitting modules and contributing to the registry infrastructure.
+Thank you for your interest in contributing to the amplifier-module-registry registry! This document outlines the process for submitting modules and contributing to the registry infrastructure.
 
 ## 📦 Submitting a Module
 
@@ -45,8 +45,8 @@ Fix any errors before proceeding. Warnings are recommendations but not blockers.
 
 ```bash
 # Fork this repo on GitHub, then:
-git clone https://github.com/YOUR-USERNAME/amplifier-modules
-cd amplifier-modules
+git clone https://github.com/YOUR-USERNAME/amplifier-module-registry
+cd amplifier-module-registry
 
 # Create your module directory
 mkdir -p registry/modules/your-module-name
@@ -144,7 +144,7 @@ Want to improve the registry itself? Great!
 
 ```bash
 git clone https://github.com/microsoft/amplifier-module-registry
-cd amplifier-modules
+cd amplifier-module-registry
 pip install jsonschema pyyaml pytest
 
 # Run tests (when available)

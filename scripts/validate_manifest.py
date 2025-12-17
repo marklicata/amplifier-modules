@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Manifest validation script for amplifier-modules registry.
+Manifest validation script for amplifier-module-registry registry.
 
 Validates module manifests against the JSON schema and performs
 additional semantic checks.
@@ -40,7 +40,7 @@ RESERVED_NAMESPACES = [
 
 
 class ManifestValidator:
-    """Validates module manifests for the amplifier-modules registry."""
+    """Validates module manifests for the amplifier-module-registry registry."""
 
     def __init__(self, schema_path: Optional[Path] = None):
         if schema_path is None:

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Compatibility checker for amplifier-modules registry.
+Compatibility checker for amplifier-module-registry registry.
 
 Checks if modules are compatible with a given amplifier-foundation version.
 Can update module status and create GitHub issues for broken modules.

@@ -1,1 +1,1 @@
-# Tests for amplifier-modules registry
+# Tests for amplifier-module-registry registry

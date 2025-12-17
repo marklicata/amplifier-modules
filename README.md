@@ -1,4 +1,4 @@
-# amplifier-modules
+# amplifier-module-registry
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)](https://github.com/microsoft/amplifier-module-registry/actions)
@@ -48,7 +48,7 @@ Want to use modules from this registry in your amplifier application? See indivi
 ## 📁 Repository Structure
 
 ```
-amplifier-modules/
+amplifier-module-registry/
 ├── registry/
 │   ├── modules/           # Community modules
 │   │   └── module-name/
@@ -120,7 +120,7 @@ Module verification, namespace management, and lifecycle policies are defined in
 ```bash
 # Clone the registry
 git clone https://github.com/microsoft/amplifier-module-registry
-cd amplifier-modules
+cd amplifier-module-registry
 
 # Set up Python environment (in WSL or Linux)
 python3 -m venv .venv
