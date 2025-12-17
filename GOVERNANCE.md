@@ -32,7 +32,7 @@ The core team (Microsoft's OCTO MADE team) is responsible for:
 ### Team Composition
 
 - Members from Microsoft's Office of the CTO (OCTO) MADE (Model, App Development & Extensibility) team
-- Contact: [Create an issue](https://github.com/microsoft/amplifier-modules/issues) with `@microsoft/amplifier-core` tag
+- Contact: [Create an issue](https://github.com/microsoft/amplifier-module-registry/issues) with `@microsoft/amplifier-core-team` tag
 
 ### Decision Authority
 

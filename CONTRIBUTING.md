@@ -111,18 +111,19 @@ To request verification:
 
 The core team reviews verification requests periodically.
 
-## 🐛 Reporting Broken Modules
+## 🐛 Reporting Problematic Modules
 
 If you find a module that:
-- Doesn't install correctly
+- Has manifest errors or validation issues
+- Contains broken source repository links
 - Is incompatible with current amplifier-foundation
 - Has security issues
 - Is abandoned/unmaintained
 
-Please [open an issue](https://github.com/microsoft/amplifier-modules/issues/new) with:
+Please [open an issue](https://github.com/microsoft/amplifier-module-registry/issues/new) with:
 - Module name
 - What's broken
-- Steps to reproduce
+- Steps to reproduce (if applicable)
 - Your environment (Python version, OS, foundation version)
 
 We'll flag the module and notify the author.
@@ -142,7 +143,7 @@ Want to improve the registry itself? Great!
 ### Development Setup
 
 ```bash
-git clone https://github.com/microsoft/amplifier-modules
+git clone https://github.com/microsoft/amplifier-module-registry
 cd amplifier-modules
 pip install jsonschema pyyaml pytest
 

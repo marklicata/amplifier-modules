@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://github.com/microsoft/amplifier-modules/schemas/registry-index.schema.json",
+  "$id": "https://github.com/microsoft/amplifier-module-registry/schemas/registry-index.schema.json",
   "title": "Amplifier Module Registry Index",
   "description": "Schema for the central registry index file",
   "type": "object",

@@ -1,15 +1,32 @@
 # amplifier-modules
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)](https://github.com/microsoft/amplifier-modules/actions)
+[![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)](https://github.com/microsoft/amplifier-module-registry/actions)
 [![Modules](https://img.shields.io/badge/modules-23-blue.svg)](./registry)
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 
 Official module registry for [amplifier-foundation](https://github.com/microsoft/amplifier-foundation) — Microsoft's Python framework for building modular, agent-driven AI applications.
 
+## 🎯 Why This Exists
+
+Building AI agents shouldn't mean reinventing the wheel. The amplifier ecosystem needs a way for developers to:
+
+- **Discover** → Find pre-built agents, tools, and integrations instead of building from scratch
+- **Trust** → Identify verified, quality-checked modules from the community
+- **Share** → Publish reusable components that solve common problems
+- **Extend** → Build on amplifier-foundation without bloating the core framework
+
+**This registry makes amplifier modular, extensible, and community-driven.**
+
 ## 📦 What is this?
 
-This repository serves as the central registry for discovering, sharing, and installing amplifier-foundation modules. Think of it like npm or PyPI, but specifically for amplifier agents, behaviors, providers, bundles, and context modules.
+This repository is the **central catalog** for amplifier-foundation modules. Think of it like the npm registry website or PyPI's package index — a discoverable directory where:
+
+- **Module authors** publish their work by submitting manifests (metadata files)
+- **Module consumers** browse and discover what's available
+- **Tools** (like [`amplifier-app-cli`](https://github.com/microsoft/amplifier-app-cli)) read the registry to enable installation and management
+
+This is a **registry/catalog**, not an installer. The actual installation of modules happens in other tools that consume this registry.
 
 ## 🚀 Quick Start
 
@@ -46,16 +63,22 @@ This repository serves as the central registry for discovering, sharing, and ins
 
 Browse the [`registry/`](./registry) directory or check [`registry/index.json`](./registry/index.json) for the complete listing.
 
-### Install a Module
+### Using Modules
+
+Modules from this registry can be installed and managed using the [`amplifier-app-cli`](https://github.com/microsoft/amplifier-app-cli):
 
 ```bash
-# CLI integration in progress - see CLI_INTEGRATION_SPEC.md
-# Target: amplifier-app-cli
-
+# Install a module from the registry
 amplifier module install code-reviewer
+
+# Search for modules
 amplifier module search "code review"
+
+# List all verified modules
 amplifier module list --verified
 ```
+
+See the [amplifier-app-cli documentation](https://github.com/microsoft/amplifier-app-cli) for installation instructions and usage details.
 
 ### Publish Your Module
 
@@ -139,7 +162,7 @@ Module verification, namespace management, and lifecycle policies are defined in
 
 ```bash
 # Clone the registry
-git clone https://github.com/microsoft/amplifier-modules
+git clone https://github.com/microsoft/amplifier-module-registry
 cd amplifier-modules
 
 # Set up Python environment (in WSL or Linux)
@@ -185,15 +208,10 @@ pytest -v
 - [x] Governance documentation
 - [x] Breaking change detection (weekly automated checks)
 - [x] Verification request process
-
-### 🚧 In Progress
-- [ ] **CLI Integration** — See [CLI_INTEGRATION_SPEC.md](./CLI_INTEGRATION_SPEC.md)
-  - Target repo: microsoft/amplifier-app-cli
-  - Commands: list, search, install, update, publish
-  - Estimated: Q1 2026
+- [x] CLI Integration (https://github.com/microsoft/amplifier-app-cli)
 
 ### 🔮 Future
-- [ ] **Simple Dependency Resolution** — Install module dependencies automatically
+- [ ] **Simple Dependency Resolution** — Declare module dependencies in manifests for automated resolution
 - [ ] **Cryptographic Signing** — GPG/Sigstore signing for verified modules
 - [ ] **Lightweight API** — Optional REST API for faster queries
 - [ ] **Search & Discovery UI** — Web interface for browsing modules
@@ -224,7 +242,13 @@ For verified status (✓ badge), see [GOVERNANCE.md](./GOVERNANCE.md#module-veri
 
 ### Reporting Issues
 
-Found a broken module? [Open an issue](https://github.com/microsoft/amplifier-modules/issues) and we'll flag it appropriately. Automated compatibility checks run weekly.
+Found a problematic module? [Open an issue](https://github.com/microsoft/amplifier-module-registry/issues) with details about:
+- Module manifest errors or validation issues
+- Broken source repository links
+- Incompatibility with current amplifier-foundation versions
+- Security concerns
+
+We'll flag modules appropriately. Automated compatibility checks run weekly.
 
 ## 📜 License
 
