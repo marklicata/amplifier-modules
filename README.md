@@ -24,61 +24,18 @@ This repository is the **central catalog** for amplifier-foundation modules. Thi
 
 - **Module authors** publish their work by submitting manifests (metadata files)
 - **Module consumers** browse and discover what's available
-- **Tools** (like [`amplifier-app-cli`](https://github.com/microsoft/amplifier-app-cli)) read the registry to enable installation and management
+- **Tools** (like [`amplifier-app-cli`](https://github.com/microsoft/amplifier-app-cli)) read the registry to enable module management
 
-This is a **registry/catalog**, not an installer. The actual installation of modules happens in other tools that consume this registry.
+This is a **registry/catalog** where modules are added and removed. Module consumption happens in other tools that read from this registry.
 
 ## 🚀 Quick Start
 
 ### Browse Modules
 
-**Current Modules**: 23 (19 verified, 4 community)
+Browse the [`registry/`](./registry) directory or check [`registry/index.json`](./registry/index.json) for the complete listing of [verified](.registry/verified/) and [community](.registry/modules/) modules.
 
-**Verified Modules** (19):
-- ✓ [code-reviewer](./registry/verified/code-reviewer) — Automated code review agent
-- ✓ [loop-streaming](./registry/verified/loop-streaming) — Token-by-token streaming orchestration
-- ✓ [loop-basic](./registry/verified/loop-basic) — Standard deterministic orchestration
-- ✓ [context-simple](./registry/verified/context-simple) — Lightweight conversation state management
-- ✓ [tool-filesystem](./registry/verified/tool-filesystem) — File read/write/edit operations
-- ✓ [tool-bash](./registry/verified/tool-bash) — Shell command execution
-- ✓ [tool-web](./registry/verified/tool-web) — Web search and content fetching
-- ✓ [tool-search](./registry/verified/tool-search) — Grep and glob file discovery
-- ✓ [tool-task](./registry/verified/tool-task) — Task delegation with sub-sessions
-- ✓ [tool-todo](./registry/verified/tool-todo) — AI self-accountability and task tracking
-- ✓ [hooks-streaming-ui](./registry/verified/hooks-streaming-ui) — Display streaming LLM output
-- ✓ [hooks-logging](./registry/verified/hooks-logging) — Lifecycle event logging
-- ✓ [hooks-todo-reminder](./registry/verified/hooks-todo-reminder) — Todo list context reminders
-- ✓ [hooks-status-context](./registry/verified/hooks-status-context) — Environment and git status injection
-- ✓ [hooks-redaction](./registry/verified/hooks-redaction) — PII and secret masking
-- ✓ [provider-anthropic](./registry/verified/provider-anthropic) — Claude 4 series integration
-- ✓ [provider-mock](./registry/verified/provider-mock) — Testing provider with mock responses
-- ✓ [provider-openai](./registry/verified/provider-openai) — GPT-4/5 integration
-- ✓ [provider-azure-openai](./registry/verified/provider-azure-openai) — Azure OpenAI Service integration
-
-**Community Modules** (4):
-- [approval-gate](./registry/modules/approval-gate) — Human approval gates for workflows
-- [hello-world](./registry/modules/hello-world) — Minimal embedded example
-- [tool-skills](./registry/modules/tool-skills) — Domain knowledge loading (by robotdad)
-- [tool-mcp](./registry/modules/tool-mcp) — Model Context Protocol integration (by robotdad)
-
-Browse the [`registry/`](./registry) directory or check [`registry/index.json`](./registry/index.json) for the complete listing.
-
-### Using Modules
-
-Modules from this registry can be installed and managed using the [`amplifier-app-cli`](https://github.com/microsoft/amplifier-app-cli):
-
-```bash
-# Install a module from the registry
-amplifier module install code-reviewer
-
-# Search for modules
-amplifier module search "code review"
-
-# List all verified modules
-amplifier module list --verified
-```
-
-See the [amplifier-app-cli documentation](https://github.com/microsoft/amplifier-app-cli) for installation instructions and usage details.
+### Consuming Modules
+Want to use modules from this registry in your amplifier application? See individual amplifier app implementations for details on discovering and integrating modules into your projects. [`amplifier-app-cli`](https://github.com/microsoft/amplifier-app-cli) is one example.
 
 ### Publish Your Module
 
